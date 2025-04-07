@@ -12,6 +12,14 @@ services:
         - "80:80"
       depends_on:
         - dfms-backend
+        - dfms-frontend
+  dfms-frontend:
+    image: capstone/fe
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "70:70"
+  
   dfms-backend:
     image: capstone/dfms:latest
     ports:
