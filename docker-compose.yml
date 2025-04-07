@@ -14,7 +14,7 @@ services:
         - dfms-backend
         - dfms-frontend
   dfms-frontend:
-    image: capstone/fe
+    image: capstone/fe:latest
     restart: unless-stopped
     tty: true
     ports:
