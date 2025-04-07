@@ -5,9 +5,9 @@ services:
     restart: unless-stopped
     tty: true
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf  
-      - ./logs/nginx:/var/log/nginx
-      - ./nginx-logrotate.conf:/etc/logrotate.d/nginx-logrotate.conf
+        - ./nginx.conf:/etc/nginx/conf.d/my-app.conf
+        - ./logs/nginx:/var/log/nginx
+        - ./nginx-logrotate.conf:/etc/logrotate.d/nginx-logrotate.conf
     ports:
       - "80:80"
     depends_on:
